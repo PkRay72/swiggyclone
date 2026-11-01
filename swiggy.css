@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #202124;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    width: 100%;
+    background: #ff4d00;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.logo {
+    background: #ff4d00;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 125px;
+    height: auto;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    color: white;
+    font-weight: 600;
+}
+
+.app-link {
+    border: 1px solid white;
+    padding: 12px 22px;
+    border-radius: 12px;
+}
+
+.signin {
+    background: #111820;
+    padding: 13px 25px;
+    border-radius: 12px;
+}
+
+.hero {
+    min-height: 570px;
+    background: #ff4d00;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 52px;
+    line-height: 1.3;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+
+.hero-left,
+.hero-right {
+    width: 260px;
+    height: 350px;
+    object-fit: cover;
+    position: absolute;
+    top: 90px;
+    border-radius: 20px;
+}
+
+.hero-left {
+    left: -100px;
+}
+
+.hero-right {
+    right: -100px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    width: 455px;
+    height: 85px;
+    background: white;
+    border: 2px solid #eeeeee;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-family: inherit;
+    margin-left: 12px;
+}
+
+.search-box input::placeholder {
+    color: #999999;
+}
+
+.location-icon {
+    color: #fc8019;
+    font-size: 26px;
+}
+
+.arrow,
+.search-icon {
+    font-size: 30px;
+    color: #333333;
+}
+
+.services {
+    max-width: 1200px;
+    margin: -5px auto 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.service-card {
+    height: 230px;
+    background: white;
+    border-radius: 35px;
+    padding: 35px 25px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h2 {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.service-card p {
+    color: #888888;
+    font-size: 16px;
+    margin: 5px 0 15px;
+}
+
+.service-card span {
+    background: #fff0e8;
+    color: #fc8019;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.service-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    align-self: flex-end;
+    border-radius: 50%;
+}
+
+.section {
+    max-width: 1450px;
+    margin: 0 auto 100px;
+    padding: 0 45px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2,
+.cities h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.arrows {
+    display: flex;
+    gap: 15px;
+}
+
+.arrows button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #eeeeee;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 45px 30px;
+}
+
+.food-item {
+    text-align: center;
+}
+
+.food-item img {
+    width: 100%;
+    max-width: 190px;
+    height: 160px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.food-item img:hover {
+    transform: scale(1.06);
+}
+
+.food-item p {
+    font-size: 21px;
+    color: #454545;
+    margin-top: 10px;
+}
+
+.grocery-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+}
+
+.grocery-item {
+    text-align: center;
+}
+
+.grocery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #f5f5f5;
+    border-radius: 20px;
+}
+
+.grocery-item h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+.dineout {
+    margin-bottom: 100px;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.restaurant-card {
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.restaurant-image {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.restaurant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.restaurant-image::after {
+    content: "";
+    position: absolute;
+    inset: 40% 0 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.restaurant-image h3 {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    color: white;
+    font-size: 21px;
+    z-index: 2;
+}
+
+.rating {
+    position: absolute;
+    bottom: 20px;
+    right: 18px;
+    color: white;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.restaurant-info {
+    padding: 18px;
+}
+
+.restaurant-info p {
+    color: #666666;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.offer {
+    background: #14a879;
+    color: white;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.bank-offer {
+    background: #c7f8e6;
+    color: #0c9f70;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.restaurant-info .coupon {
+    color: #5936c9;
+    font-weight: 500;
+}
+
+
+/* APP BANNER */
+
+.app-banner {
+    max-width: 1350px;
+    min-height: 300px;
+    margin: 0 auto 100px;
+    padding: 50px 80px;
+    background: #171d20;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.app-text h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.app-text p {
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+.phone {
+    width: 220px;
+    height: 290px;
+    background: #ffffff;
+    border: 7px solid #888888;
+    border-radius: 35px 35px 0 0;
+    padding: 15px;
+    position: relative;
+    align-self: flex-end;
+    color: #fc8019;
+    text-align: center;
+}
+
+.phone-screen {
+    height: 100%;
+    border: 1px solid #dddddd;
+    padding-top: 20px;
+}
+
+.phone-camera {
+    width: 65px;
+    height: 15px;
+    background: black;
+    border-radius: 20px;
+    margin: -15px auto 20px;
+}
+
+.phone h2 {
+    margin: 10px 0;
+}
+
+.qr-code {
+    font-size: 28px;
+    color: black;
+    line-height: 0;
+    border: 3px solid black;
+    width: 100px;
+    margin: 0px auto;
+}
+
+.phone p {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.cities h2 {
+    margin-bottom: 25px;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.city-grid a {
+    border: 2px solid #dddddd;
+    border-radius: 15px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #444444;
+}
+
+.city-grid .show-more {
+    color: #fc8019;
+    font-weight: 700;
+}
+
+.footer {
+    background: #f0f0f5;
+    padding: 65px 5% 30px;
+}
+
+.footer-content {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1.2fr;
+    gap: 45px;
+}
+
+.footer-brand img {
+    width: 150px;
+    background: #fc8019;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.footer-brand p {
+    margin-top: 15px;
+    color: #777777;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: #666666;
+    font-size: 15px;
+}
+
+.footer-column a:hover {
+    color: #fc8019;
+}
+
+.footer-column .legal {
+    margin-top: 15px;
+}
+
+.social-title {
+    margin-top: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 65px auto 0;
+    border-top: 2px solid #cccccc;
+    padding-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-bottom h2 {
+    font-size: 22px;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.store-buttons a {
+    background: #000000;
+    color: white;
+    padding: 17px 25px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+    .navbar nav {
+        gap: 15px;
+        font-size: 13px;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+    .hero-left,
+    .hero-right {
+        width: 160px;
+    }
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .food-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .grocery-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .city-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: auto;
+        padding: 18px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .logo img {
+        width: 105px;
+    }
+    .hero {
+        min-height: 500px;
+    }
+    .hero h1 {
+        font-size: 29px;
+    }
+    .hero-left,
+    .hero-right {
+        display: none;
+    }
+    .search-box {
+        width: 100%;
+        height: 65px;
+    }
+    .services {
+        grid-template-columns: 1fr;
+        margin: 30px auto 70px;
+    }
+    .service-card {
+        height: 190px;
+    }
+    .section {
+        padding: 0 18px;
+        margin-bottom: 70px;
+    }
+    .section-heading h2,
+    .cities h2 {
+        font-size: 21px;
+    }
+    .arrows button {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+    }
+    .food-item img {
+        height: 130px;
+    }
+    .food-item p {
+        font-size: 16px;
+    }
+    .grocery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
+    }
+    .grocery-item img {
+        height: 160px;
+    }
+    .grocery-item h3 {
+        font-size: 15px;
+    }
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+    }
+    .restaurant-image {
+        height: 230px;
+    }
+    .app-banner {
+        margin: 0 15px 70px;
+        padding: 35px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .app-text h2 {
+        font-size: 25px;
+    }
+    .phone {
+        height: 240px;
+        width: 190px;
+    }
+    .city-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .city-grid a {
+        font-size: 12px;
+        min-height: 75px;
+    }
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+    .footer-brand {
+        grid-column: span 2;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-bottom h2 {
+        font-size: 19px;
+    }
+    .store-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .store-buttons a {
+        text-align: center;
+    }
+}
